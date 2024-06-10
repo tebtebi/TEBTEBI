@@ -1,0 +1,58 @@
+/*
+1 -- ENTER INITIAL BUDGET AND AMOUNT
+2 -- IF AMOUNT < BUDGET, ASK IF ADD AMOUNT
+3 -- IF YES, ASK AMOUNT
+4 -- IF NO, END PROGRAM
+5 -- IF ADDED AMOUNT, ADD TO INITAL AMOUNT
+6 -- COMPARE NEW AMOUNT AND INITIAL BUDGET
+7 -- REPEAT PROCESS 2
+8 -- IF AMOUNT >= BUDGET, PRINT "OVER BUDGET"
+9 -- END PROGRAM
+*/
+
+
+#include <stdio.h>
+
+int main() 
+{
+	int iniBudget, iniAmount; 
+	//ASKING USER FOR INITIAL BUDGET AND INITIAL AMOUNT
+	printf("Enter your initial budget:");
+	scanf("%d", &iniBudget);
+	printf("Your initial budget is:%d\n", iniBudget);
+	
+	printf("Enter your initial amount:");
+	scanf("%d", &iniAmount);
+	printf("Your initial amount is:%d\n", iniAmount);
+	
+	while (iniAmount < iniBudget) //USED WHILE FOR LOOP
+	{
+		char userDecide;
+		while ((getchar()) != '\n'); //FLUSHING INPUT BUFFER(AVOID EXTRA CHARACTERS TO BE READ)
+		printf("Do you want to add amount? Y or N\n");
+		scanf("%c", &userDecide);
+		
+		if(userDecide == 'Y' || userDecide == 'y')
+		{
+			int addAmount;
+			printf("Enter the amount to be added: ");
+            scanf("%d", &addAmount);
+            iniAmount += addAmount;
+            printf("Amount added. Your new total amount is: %d\n", iniAmount);
+		}
+		
+		else if(userDecide == 'N' || userDecide == 'n')
+		{
+			break; //THIS WILL END THE PROGRAM
+		}
+		
+	}
+	
+	if (iniAmount >= iniBudget)
+    {
+        printf("OVER BUDGET");
+    }
+	
+	return 0;
+}
+	
