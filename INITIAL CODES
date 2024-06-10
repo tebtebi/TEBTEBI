@@ -1,0 +1,79 @@
+/* GRADED EXERCISE 4
+1 -- ASK THE USER TO INPUT A NUMBER
+2 -- ASK THE USER TO INPUT  A BUDGET
+3 --IF AMOUNT>BUDGET, DISPLAY "OVER BUDGET"
+4 -- IF AMOUNT==EXACT BUDGET, DISPLAY "ENOUGH BUDGET"
+5 -- IF AMOUNT<BUDGET, DISPLAY "IN BUDGET"
+*/
+
+/* THIS PART IS THE FIRST ONE I MADE IN SCHOOL
+#include <stdio.h>
+
+int main()
+{
+	int fAmt, fBdt;
+	printf("Enter your amount:\n"); 
+	scanf(" %d", &fAmt);
+	printf("Amount is: %d\n", fAmt);
+	
+	printf("Enter your budget:"); 
+	scanf(" %d", &fBdt);
+	printf("Budget is: %d\n", fBdt);
+	
+	
+	if (fAmt > fBdt) {
+		printf("OVER BUDGET");
+	}
+	
+	else if (fAmt == fBdt) {
+		printf("ENOUGH BUDGET");
+	}
+	
+	else if (fAmt < fBdt) {
+		printf("IN BUDGET");
+	}
+
+	return 0;
+}
+*/ 
+
+//THIS IS A SAMPLE CODE FOR GETTING CHARACTER INPUT FROM USER
+//TESTING OF IF ELSE STATEMENTS FOR CHARACTERS
+/*
+
+#include <stdio.h>
+
+int main()
+{
+    int iniBudget, iniAmount;
+
+    printf("Enter your initial budget:");
+    scanf("%d", &iniBudget);
+    printf("Your initial budget is:%d\n", iniBudget);
+
+    printf("Enter your initial amount:");
+    scanf("%d", &iniAmount);
+    printf("Your initial amount is:%d\n", iniAmount);
+
+    if (iniAmount < iniBudget)
+    {
+        char userDecide;
+        while ((getchar()) != '\n');
+
+        printf("Do you want to add amount? Yes or No\n");
+        scanf("%c", &userDecide);
+
+        if(userDecide == 'Y' || userDecide == 'y')
+        {
+            printf("Okay");
+        }
+
+        else if(userDecide == 'N' || userDecide == 'n')
+        {
+            printf("Thanks");
+        }
+    }
+
+    return 0;
+}
+*/
